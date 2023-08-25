@@ -29,7 +29,7 @@ function App() {
       <MainVideo/>
       <Outlet/>
       
-      <Provider store={store}>
+      <Provider store={store} basename={process.env.PUBLIC_URL}>
         <Action/>
         {/* <Comedy/> */}
         
