@@ -12,8 +12,10 @@ import VideoDetail from './pages/VideoDetail';
 import DetailPage from './component/DetailPage';
 
 const router = createBrowserRouter([
+  basename : process.env.PUBLIC_URL,
+  routes:[
   {
-    path : `/`,
+    path : '/',
     element : <App/>,
     errorElement : <NotFound/>,
     children:[
@@ -29,6 +31,7 @@ const router = createBrowserRouter([
     
   },
     {path:'/movie/:movieId',element : <DetailPage/>}
+]
 
 ])
 
@@ -36,7 +39,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider basename = {process.env.PUBLIC_URL}/>
+    <RouterProvider router ={router}/>
   </React.StrictMode>
 );
 
