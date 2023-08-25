@@ -11,7 +11,7 @@ import Videos from './pages/Videos';
 import VideoDetail from './pages/VideoDetail';
 import DetailPage from './component/DetailPage';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter({
   basename : process.env.PUBLIC_URL,
   routes:[
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     {path:'/movie/:movieId',element : <DetailPage/>}
 ]
 
-])
+})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
