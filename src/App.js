@@ -20,6 +20,7 @@ import DetailPage from './component/DetailPage';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
+
 function App() {
   return (
     <>
