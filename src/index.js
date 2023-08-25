@@ -13,7 +13,7 @@ import DetailPage from './component/DetailPage';
 
 const router = createBrowserRouter([
   {
-    path : `${process.env.PUBLIC_URL}`,
+    path : `/`,
     element : <App/>,
     errorElement : <NotFound/>,
     children:[
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router ={router}/>
+    <RouterProvider basename = {process.env.PUBLIC_URL}/>
   </React.StrictMode>
 );
 
