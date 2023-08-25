@@ -13,8 +13,8 @@ import DetailPage from './component/DetailPage';
 
 const router = createBrowserRouter({
   basename : process.env.PUBLIC_URL,
-  routes:[
-  {
+  routes : [
+    {
     path : '/',
     element : <App/>,
     errorElement : <NotFound/>,
@@ -31,8 +31,7 @@ const router = createBrowserRouter({
     
   },
     {path:'/movie/:movieId',element : <DetailPage/>}
-]
-
+],
 })
 
 
